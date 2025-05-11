@@ -20,7 +20,12 @@ number = random.randint(1, max_num)
 attempts = 0
 
 while True:
-  guess = int(input(f"Enter your guess (1-{max_num}): "))
+  try:
+    guess = int(input(f"Enter your guess (1-{max_num}): "))
+  except ValueError:
+    print("That is not a number. Try again.")
+    continue
+
   attempts += 1
 
   if guess == number:
