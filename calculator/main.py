@@ -1,17 +1,22 @@
 print("Simple Calculator")
 
 while True:
-  try:
-    num1 = float(input("Enter first number: "))
-  except ValueError:
-    print("That is not a valid number. Try again.")
+
+  while True:
+    try:
+      num1 = float(input("Enter first number: "))
+      break
+    except ValueError:
+      print("That is not a valid number. Try again.")
 
   op = input("Enter operator (+, -, *, /): ")
 
-  try:
-    num2 = float(input("Enter second number: "))
-  except ValueError:
-    print("That is not a valid number. Try again.")
+  while True:
+    try:
+      num2 = float(input("Enter second number: "))
+      break
+    except ValueError:
+      print("That is not a valid number. Try again.")
 
   if op == "+":
     print(f"Result: {num1 + num2}")
