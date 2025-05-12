@@ -36,7 +36,15 @@ while True:
 
       if guess == number:
         print(f"You got it in {attempts} tries!")
+
+        if attempts <= 3:
+          print("💥 Genius level! Are you even human?")
+        elif attempts <= 7:
+          print("🔥 Solid guessing!")
+        elif attempts <= max_attempts:
+          print("😂 You got there eventually.")
         break
+
       elif guess < number:
         print("Too low!")
       else:
