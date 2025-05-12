@@ -9,7 +9,14 @@ while True:
     except ValueError:
       print("That is not a valid number. Try again.")
 
-  op = input("Enter operator (+, -, *, /): ")
+  valid_operators = ["+", "-", "*", "/"]
+
+  while True:
+    op = input("Enter operator (+, -, *, /): ")
+    if op in valid_operators:
+      break
+    else:
+      print("Invalid operator. Please chosse from +, -, *, /. 2433")
 
   while True:
     try:
