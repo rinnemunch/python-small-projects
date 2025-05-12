@@ -9,13 +9,17 @@ while True:
 
   if difficulty == "1":
     max_num = 50
+    max_attempts = 15
   elif difficulty == "2":
     max_num = 100
+    max_attempts = 10
   elif difficulty == "3":
     max_num = 500
+    max_attempts = 5
   else:
     print("Invalid choice. Defaulting to Medium.")
     max_num = 100
+    max_attempts = 10
 
 
   number = random.randint(1, max_num)
@@ -37,6 +41,10 @@ while True:
         print("Too low!")
       else:
         print("Too high!")
+
+      if attempts >= max_attempts:
+        print(f"Out of tries! The number was {number}.")
+        break
 
 
   play_again = input("Play again? (y/n): ").lower()
