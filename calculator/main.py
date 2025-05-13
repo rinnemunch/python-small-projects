@@ -10,7 +10,6 @@ while True:
       print("That is not a valid number. Try again.")
 
   valid_operators = ["+", "-", "*", "/", "%", "**"]
-
   while True:
     op = input("Enter operator (+, -, *, /, %, **): ")
     if op in valid_operators:
@@ -21,6 +20,9 @@ while True:
   while True:
     try:
       num2 = float(input("Enter second number: "))
+      if op in ["/", "%"] and num2 == 0:
+        print("You can't divide or modulo by zero. Try a different number.")
+        continue
       break
     except ValueError:
       print("That is not a valid number. Try again.")
