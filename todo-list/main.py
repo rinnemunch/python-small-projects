@@ -12,11 +12,11 @@ input_frame = tk.Frame(window)
 input_frame.pack(pady=10)
 
 #boxes for tasks
-task_entry = tk.Entry(input_frame, width=30)
+task_entry = tk.Entry(input_frame, width=30, font=("Segoe UI", 11))
 task_entry.pack(side=tk.LEFT, padx=5)
 
 #task list display
-tasks_frame = tk.Frame(window)
+tasks_frame = tk.Frame(window, bg="#f4f4f4", padx=10)
 tasks_frame.pack(pady=10)
 
 #functions
@@ -28,7 +28,7 @@ def add_task():
     task_frame.pack(fill="x", pady=2)
 
     #task label
-    label = tk.Label(task_frame, text=task_text, font=("Arial", 12), anchor="w")
+    label = tk.Label(task_frame, text=task_text, font=("Segoe UI", 12), anchor="w", bg="white", padx=10)
     label.pack(side=tk.LEFT, fill="x", expand=True)
 
     #delete button
