@@ -3,6 +3,9 @@ import tkinter as tk
 #main window
 window = tk.Tk()
 window.title("Shaun's To-Do List")
+#styling
+window.geometry("400x400")
+window.configure(bg="#f4f4f4")
 
 #Frame
 input_frame = tk.Frame(window)
