@@ -13,12 +13,20 @@ def increment():
   count += 1
   label.config(text=f"Count: {count}")
 
+def reset():
+  global count
+  count = 0
+  label.config(text=f"Count: {count}")
+
 label = tk.Label(window, text="Count: 0", font=("Arial", 16))
 label.pack(pady=10)
 
 #button!
 button = tk.Button(window, text="Click Me", command=increment, font=("Arial", 14))
 button.pack(pady=5)
+#for the reset button
+reset_button = tk.Button(window, text="Reset", command=reset, font=("Arial", 14))
+reset_button.pack(pady=5)
 
 #run
 window.mainloop()
