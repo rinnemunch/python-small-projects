@@ -32,7 +32,7 @@ def add_task():
     label.pack(side=tk.LEFT, fill="x", expand=True)
 
     #delete button
-    delete_button = tk.Button(task_frame, text="❌", command=task_frame.destroy)
+    delete_button = tk.Button(task_frame, text="❌", command=task_frame.destroy, font=("Segoe UI", 10), bg="#e74c3c", fg="white")
     delete_button.pack(side=tk.RIGHT)
 
     #clear box
@@ -40,7 +40,7 @@ def add_task():
 
 
 #button
-add_button = tk.Button(input_frame, text="Add Task", command=add_task)
+add_button = tk.Button(input_frame, text="Add Task", command=add_task, font=("Segoe UI", 10), bg="#4CAF50", fg="white")
 add_button.pack(side=tk.LEFT)
 
 task_entry.bind("<Return>", lambda event: add_task()) #this is just the function to click enter to add another task
