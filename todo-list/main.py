@@ -40,4 +40,6 @@ def add_task():
 add_button = tk.Button(input_frame, text="Add Task", command=add_task)
 add_button.pack(side=tk.LEFT)
 
+task_entry.bind("<Return>", lambda event: add_task()) #this is just the function to click enter to add another task
+
 window.mainloop()
