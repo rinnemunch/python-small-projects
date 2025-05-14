@@ -20,9 +20,21 @@ tasks_frame.pack(pady=10)
 def add_task():
   task_text = task_entry.get()
   if task_text:
-    label = tk.Label(tasks_frame, text=task_text, font=("Arial", 12), anchor="w")
-    label.pack(fill="x")
+    #frame for each task row
+    task_frame = tk.Frame(tasks_frame)
+    task_frame.pack(fill="x", pady=2)
+
+    #task label
+    label = tk.Label(task_frame, text=task_text, font=("Arial", 12), anchor="w")
+    label.pack(side=tk.LEFT, fill="x", expand=True)
+
+    #delete button
+    delete_button = tk.Button(task_frame, text="❌", command=task_frame.destroy)
+    delete_button.pack(side=tk.RIGHT)
+
+    #clear box
     task_entry.delete(0, tk.END)
+
 
 #button
 add_button = tk.Button(input_frame, text="Add Task", command=add_task)
