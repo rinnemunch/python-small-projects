@@ -20,9 +20,12 @@ def tell_joke():
 
 #Starting the joke
 if __name__ == "__main__":
+  count = 0
+
   while True:
     user_input = input("Press Enter to hear a joke (or type 'q' to quit): ")
     if user_input.lower() == "q":
-      print("See ya!")
+      print(f"\nYou heard {count} cringy ass joke(s) today. See ya!")
       break
     tell_joke()
+    count += 1
