@@ -20,5 +20,9 @@ def tell_joke():
 
 #Starting the joke
 if __name__ == "__main__":
-  input("Press Enter to hear a joke...")
-  tell_joke()
+  while True:
+    user_input = input("Press Enter to hear a joke (or type 'q' to quit): ")
+    if user_input.lower() == "q":
+      print("See ya!")
+      break
+    tell_joke()
