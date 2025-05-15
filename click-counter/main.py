@@ -13,6 +13,16 @@ def increment():
   count += 1
   label.config(text=f"Count: {count}")
 
+  #milestone messages
+  if count == 10:
+    status_label.config(text="🔥 10 clicks! You're on fire!")
+  elif count == 50:
+    status_label.config(text="😲 50? Ight chill.")
+  elif count == 100:
+    status_label.config(text="🚀 100! You're unstoppable and a bit crazy!")
+  else:
+    status_label.config(text="")
+
 def decrement():
   global count
   count -= 1
@@ -25,6 +35,8 @@ def reset():
 
 label = tk.Label(window, text="Count: 0", font=("Arial", 16))
 label.pack(pady=10)
+status_label = tk.Label(window, text="", font=("Arial", 12))
+status_label.pack(pady=5)
 
 #button!
 button = tk.Button(window, text="Click Me", command=increment, font=("Arial", 14))
