@@ -2,7 +2,8 @@ import tkinter as tk
 
 #main window
 window = tk.Tk()
-window.title("Click Counter")
+window.title("🖱️ Click Counter")
+
 
 #variables
 count = 0
@@ -60,7 +61,7 @@ label.pack(pady=10)
 status_label = tk.Label(window, text="", font=("Arial", 12))
 status_label.pack(pady=5)
 
-#button!
+#click me button!
 button = tk.Button(window, text="Click Me", command=increment, font=("Arial", 14))
 button.pack(pady=5)
 #decrease button
@@ -75,3 +76,4 @@ theme_button.pack(pady=5)
 
 #run
 window.mainloop()
+window.iconbitmap("mouse.ico")
