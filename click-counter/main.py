@@ -74,6 +74,12 @@ reset_button.pack(pady=5)
 theme_button = tk.Button(window, text="Toggle Theme", command=toggle_theme, font=("Arial", 14))
 theme_button.pack(pady=5)
 
+#bind
+window.bind("<Up>", lambda event: increment())
+window.bind("<Down>", lambda event: decrement())
+window.bind("R", lambda event: reset())
+
+
 #run
 window.mainloop()
 window.iconbitmap("mouse.ico")
