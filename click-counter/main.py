@@ -9,9 +9,13 @@ window.title("🖱️ Click Counter")
 count = 0
 is_dark = False
 
-#increase & decrease
+#increment
 def increment():
   global count
+  if count >= 100:
+    status_label.config(text="🚫 Max limit reached (100)")
+    return
+
   count += 1
   label.config(text=f"Count: {count}")
 
@@ -25,8 +29,13 @@ def increment():
   else:
     status_label.config(text="")
 
+#decrement
 def decrement():
   global count
+  if count <= -10:
+    status_label.config(text="⛔ Can't go lower than -10")
+    return
+
   count -= 1
   label.config(text=f"Count: {count}")
 
